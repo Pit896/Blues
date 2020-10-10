@@ -13,8 +13,8 @@ module.exports = {
 
     let user = message.author;
 
-    let timeout = config.timeout;
-    let amount = config.daily;
+    let timeout = process.env.TIMEOUT_DAILY;
+    let amount = process.env.DAILY;
   
     let daily = await db.fetch(`daily_${message.guild.id}_${user.id}`);
   
