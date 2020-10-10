@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
-const config = require('../json/daily.json');
+//const config = require('../json/daily.json');
 
 
 module.exports = {
