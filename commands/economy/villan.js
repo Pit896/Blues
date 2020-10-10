@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
-const config = require('../json/villan.json');
+//const config = require('../json/villan.json');
 
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
 
     let user = message.author;
 
-    let timeout = config.timeout;
+    let timeout = process.env.TIMEOUT_VILLAN;
 
     let crime = db.get(`crime_${message.guild.id}_${user.id}`)
   
