@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 
 const db = require('quick.db');
-const { default_prefix } = require('../../bot_config/config.json');
+//const { default_prefix } = require('../../bot_config/config.json');
 
 
 module.exports = {
