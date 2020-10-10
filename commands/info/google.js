@@ -1,6 +1,6 @@
 const discord = require('discord.js');
 const request = require('node-superfetch');
-const config = require('../../bot_config/API.json')
+//const config = require('../../bot_config/API.json')
 
 
 module.exports = {
@@ -10,8 +10,8 @@ module.exports = {
     usage: '!google <search>',
     run: async (client, message, args) => {
 
-        let gkey = config.google;
-        let csx = "4b0b3746cd6c0c674";
+        let gkey = process.env.GOOGLE;
+        let csx = process.env.CSX;
         let query = args.join(" ");
 
         if(!query) return message.reply('please provide a query to search.');
