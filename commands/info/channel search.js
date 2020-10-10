@@ -1,6 +1,6 @@
 const discord = require('discord.js');
 const request = require('node-superfetch');
-const config = require('../../bot_config/API.json');
+//const config = require('../../bot_config/API.json');
 
 module.exports = {
     name: 'channel',
@@ -11,7 +11,7 @@ module.exports = {
         let name = args.join(" ");
         if(!name) return message.channel.send("Unknow name.")
 
-        let channel = await request.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${name}&key=${config.youtube}&maxResults=1&type=channel`)
+        let channel = await request.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${name}&key=${process.env.YOUTUBE_API}&maxResults=1&type=channel`)
         .catch(() => message.channel.send("Unknow channel name."));
 
         if(!channel.body.items[0]) return message.channel.send("No channel result found. Try again.");
