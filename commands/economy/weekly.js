@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
-const config = require('../json/weekly.json')
+//const config = require('../json/weekly.json')
 
 
 module.exports = {
@@ -12,8 +12,8 @@ module.exports = {
   run: async (client, message, args) => {
 
   let user = message.author;
-  let timeout = config.timeout;
-  let amount = config.amount;
+  let timeout = process.env.TIMEOUT_WEEKLY;
+  let amount = process.env.WEEKLY;
 
   let weekly = await db.fetch(`weekly_${message.guild.id}_${user.id}`);
 
