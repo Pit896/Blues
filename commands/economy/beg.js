@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
-const config = require('../json/beg.json');
+//const config = require('../json/beg.json');
 
 
 module.exports = {
@@ -13,8 +13,8 @@ module.exports = {
 
     let user = message.author;
 
-    let timeout = config.timeout_beg;
-    let amount = config.amount;
+    let timeout = process.env.TIMEOUT_BEG;
+    let amount = process.env.BEG;
   
     let beg = await db.fetch(`beg_${message.guild.id}_${user.id}`);
   
