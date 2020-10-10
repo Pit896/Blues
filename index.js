@@ -3,7 +3,7 @@ const { CanvasSenpai } = require('canvas-senpai');
 const canva = new CanvasSenpai();
 
 const db = require('quick.db');
-const { badwords } = require('./commands/json/badwords.json');
+//const { badwords } = require('./commands/json/badwords.json');
 
 const discord = require('discord.js');
 const client = new discord.Client({
