@@ -3,7 +3,7 @@ const search = require('youtube-search');
 
 const opts = {
     maxResults: 25,
-    key: "AIzaSyCyjLpayOoaBG7gRrrBNUChf1ICRjrx-fk",
+    key: process.env.YOUTUBE_API,
     type: 'video'
 };
 
