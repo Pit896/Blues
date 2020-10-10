@@ -44,7 +44,7 @@ module.exports = {
             let winner = m.reactions.cache.get('🎉').users.cache.filter(u=>!u.bot).random();
             if(m.reactions.cache.size==1) {
                 m.delete();
-                return message.channel.send(`No one reacted❌`);
+                return message.channel.send(`Only 1 reacted win ${winner}!`);
             }
             m.delete();
             message.channel.send(`🎉CONGRATULATIONS🎉\n${winner} win **${prize}**!`);
