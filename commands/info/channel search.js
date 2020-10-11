@@ -1,6 +1,5 @@
 const discord = require('discord.js');
 const request = require('node-superfetch');
-//const config = require('../../bot_config/API.json');
 
 module.exports = {
     name: 'channel',
