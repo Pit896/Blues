@@ -20,7 +20,7 @@ module.exports = {
         let embed = new discord.MessageEmbed()
            .setColor("RANDOM")
            .setDescription(`I've deleted **${messages.size}** for you👍`);
-          message.channel.send(embed));  
+          message.channel.send(embed);  
         } 
     }
 }
