@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
 
 const Client = require("fortnite");
-const ft = new Client("dc3ef70d-be48-4fd9-bf2c-e489e094d57d");
+const ft = new Client(process.env.FORTNITE);
 
 module.exports = {
     name: "fortnite",
