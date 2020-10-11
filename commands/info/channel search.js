@@ -15,7 +15,7 @@ module.exports = {
 
         if(!channel.body.items[0]) return message.channel.send("No channel result found. Try again.");
 
-        let data = await request.get(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,statistics,brandingSettings&id=${channel.body.items[0].id.channelId}&key=${config.youtube}`)
+        let data = await request.get(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,statistics,brandingSettings&id=${channel.body.items[0].id.channelId}&key=${process.env.YOUTUBE_API}`)
         .catch(() => message.channel.send("Unknow channel error."));
 
         let embed = new discord.MessageEmbed()
