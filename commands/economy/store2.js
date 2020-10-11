@@ -11,7 +11,7 @@ module.exports = {
 
     let embed = new Discord.MessageEmbed()
     .setTitle("Items avabile:")
-    .setDescription("`bronze`, `nikes`, `car`, `mansion`");
+    .setDescription("`bronze`, `nikes`, `car`, `mansion`, `silver`");
 
     if(!args[0]) {
       return message.channel.send(embed);
@@ -20,7 +20,7 @@ module.exports = {
     if (args[0] == 'bronze') {
     
       let embed = new Discord.MessageEmbed()
-      .setDescription("**Bronze Rank**\n\nBenefits: You get respect from members!")
+      .setDescription("**Bronze Rank**\n\nBenefits: You get level 1 of respect from members!")
       .setColor("#FFFFFF")
       message.channel.send(embed)
     } else if(args[0] == 'nikes') {
@@ -40,5 +40,12 @@ module.exports = {
     message.channel.send(embed)
   }
 
+  if (args[0] == 'silver') {
+    
+    let embed = new Discord.MessageEmbed()
+    .setDescription("**Silver Rank**\n\nBenefits: You get level 2 of respect from members!")
+    .setColor("#FFFFFF")
+    message.channel.send(embed)
+  }
   }
 }
