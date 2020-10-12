@@ -27,7 +27,7 @@ module.exports = {
 
   let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`**${user}'s Profile**\n\n💷Pocket: ${money}\n💰Bank: ${bank}\n💎VIP Rank: \n**-${vip}**\n**-${vip2}**\n\n**Inventory**\n\n💸Nikes: ${shoes}\n🏎Cars: ${newcar}\n🏢Mansions: ${newhouse}`);
+  .setDescription(`**${user}'s Profile**\n\n💷Pocket: ${money}\n💰Bank: ${bank}\n\n**Inventory**\n\n💸Nikes: ${shoes}\n🏎Cars: ${newcar}\n🏢Mansions: ${newhouse}`);
   message.channel.send(moneyEmbed)
 
 
