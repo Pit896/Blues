@@ -18,7 +18,7 @@ module.exports = {
 
   let vip = await db.fetch(`bronze_${message.guild.id}_${user.id}`)
     if(vip === null) vip = 'No VIP Bronze'
-    if(vip === true) vip = 'Bronze Activeted'
+    if(vip === true) vip = '🥉Bronze Activeted'
 
   let vip2 = await db.fetch(`silver_${message.guild.id}_${user.id}`)
     if(vip2 === null) vip2 = 'No VIP Silver'
