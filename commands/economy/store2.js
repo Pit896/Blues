@@ -31,6 +31,6 @@ module.exports = {
     .setDescription("**Mansion**\n\nBenefits: Chance to win coins, roles on our Discord Server + More by leading the leaderboard")
     .setColor("#FFFFFF")
     message.channel.send(embed)
-  
+  }
   }
 }
