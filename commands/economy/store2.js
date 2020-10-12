@@ -11,7 +11,7 @@ module.exports = {
 
     let embed = new Discord.MessageEmbed()
     .setTitle("Items avabile:")
-    .setDescription("`bronze`, `nikes`, `car`, `mansion`");
+    .setDescription("`nikes`, `car`, `mansion`");
 
     if(!args[0]) {
       return message.channel.send(embed);
