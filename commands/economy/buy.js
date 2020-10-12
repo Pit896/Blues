@@ -13,23 +13,7 @@ module.exports = {
 
     let author = db.fetch(`money_${message.guild.id}_${user.id}`)
 
-    let Embed = new Discord.MessageEmbed()
-    .setColor("#FFFFFF")
-    .setDescription(`You need 2000 coins to purchase Bronze VIP`);
-
-    if (args[0] == 'bronze') {
-        if (author < 3500) return message.channel.send(Embed)
-        
-        db.fetch(`bronze_${message.guild.id}_${user.id}`);
-        db.set(`bronze_${message.guild.id}_${user.id}`, true)
-
-        let Embed2 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription(`💎Purchased Bronze VIP For 3500 Coins`);
-
-        db.subtract(`money_${message.guild.id}_${user.id}`, 3500)
-        message.channel.send(Embed2)
-    } else if(args[0] == 'nikes') {
+     if(args[0] == 'nikes') {
         let Embed2 = new Discord.MessageEmbed()
         .setColor("#FFFFFF")
         .setDescription(`You need 600 coins to purchase some Nikes`);
@@ -77,28 +61,6 @@ module.exports = {
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 1200)
         message.channel.send(Embed3)
-    } else if(args[0] == 'silver') {
-        let Embed5 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription(`You need 4250 coins to purchase a Silver Rank`);
-
-        if (author < 4250) return message.channel.send(Embed5)
-       
-        db.fetch(`silver_${message.guild.id}_${user.id}`)
-        db.set(`silver_${message.guild.id}_${user.id}`, true)
-
-        let Embed4 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription(`💎Purchased a Silver Rank For 4250 Coins`);
-
-        db.subtract(`money_${message.guild.id}_${user.id}`, 4250)
-        message.channel.send(Embed4)
-        } else {
-        let embed3 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription('Enter an item to buy')
-        .addField('Item Avabile', '`bronze`, `silver`, `nikes`, `car`, `mansion`', true);
-        message.channel.send(embed3)
     }
     }
 }
