@@ -22,7 +22,7 @@ module.exports = {
 
   let vip2 = await db.fetch(`silver_${message.guild.id}_${user.id}`)
     if(vip2 === null) vip2 = 'No VIP Silver'
-    if(vip2 === true) vip2 = 'Silver Activeted'
+    if(vip2 === true) vip2 = '🥈Silver Activeted'
 
   let shoes = await db.fetch(`nikes_${message.guild.id}_${user.id}`)
   if(shoes === null) shoes = '0'
