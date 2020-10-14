@@ -9,7 +9,7 @@ module.exports = {
     run: (client, message, args) => {
 
         let embed = new MessageEmbed()
-        .setTitle(`INVITE ${clint.user.username} TO YOUR SERVER!`)
+        .setTitle(`INVITE ${client.user.username} TO YOUR SERVER!`)
         .setFooter("Blues by Pit.js", `https://i.pinimg.com/originals/52/34/63/5234632e7e40c627035f42c3a064354f.jpg`)
         .setColor("#2518d9")
         .setThumbnail(client.user.displayAvatarURL())
